@@ -43,12 +43,13 @@ class Thing {
 
 class CreativeWork {
   // Thing about;
-  // MediaObject associatedMedia;
+  MediaObject associatedMedia;
   Person copyrightHolder;
   Date copyrightYear;
   Person creator;
   Date datePublished;
-  // CreativeWork exampleOfWork;
+  CreativeWork exampleOfWork;
+  CreativeWork hasPart;
   URL isBasedOnUrl;
   URL license;
   Person publisher;
@@ -83,14 +84,7 @@ class ImageObject {
  * @extends CreativeWork
  */
 
-class Book {
-}
-
-/**
- * @extends CreativeWork
- */
-
-class MusicRecording {
+class Article {
 }
 
 /**
@@ -105,8 +99,8 @@ class Photograph {
  */
 
 class Webpage {
-  // Date lastReviewed;
+  Date lastReviewed;
   // ImageObject primaryImageOfPage;
   // URL relatedLink;
-  // Person reviewedBy;
+  Person reviewedBy;
 }
