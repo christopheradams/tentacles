@@ -18,3 +18,5 @@ Data Model
 The root of our data model is a `WebPage` as entered into the system and reviewed by a `Person` (e.g, a user of a system implementing this model). The user asserts that the web page contains a `CreativeWork` with attendant credit and license information and an associated `MediaObject` (e.g, an image), which is derived from some other work (e.g., a photograph).
 
 ![WebPage.png](https://raw.githubusercontent.com/christopheradams/tentacles/master/uml/WebPage.png)
+
+This data model should be sufficient for describing provenence information for creative works on the Web. The example can be extended to other media objects (like video or music recording) and more specific publishing contexts (like news article or blog posting).
