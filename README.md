@@ -17,8 +17,14 @@ The diagram shows a fraction of the valid properties for each type, only those t
 Data Model
 ==========
 
-The root of our data model is a `WebPage` as entered into the system and reviewed by a `Person` (e.g, a user of a system implementing this model). The user asserts that the web page contains a `CreativeWork` with attendant credit and license information and an associated `MediaObject` (e.g, an image), which is derived from some other work (e.g., a photograph).
+The centerpiece of our model is a `CreativeWork`, defined minimally by a creator, title (name), license, and URL; and at least one associated `MediaObject`.
 
-![WebPage.png](https://raw.githubusercontent.com/christopheradams/tentacles/master/uml/WebPage.png)
+![UseCase.png](https://raw.githubusercontent.com/christopheradams/tentacles/master/uml/UseCase.png)
+
+If a work has been re-used on the web, we identify the `WebPage` where it is shown, and declare that the page contains the transformed work using the `hasPart` property. To the transformed work we add any meta-data we can find on the web page about the work, as well as any associated media files. Finally, we use the `exampleOfWork` property to link the transformed work to the original.
+
+![ReuseCase.png](https://raw.githubusercontent.com/christopheradams/tentacles/master/uml/ReuseCase.png)
+
+We can also identify which user has asserted or verified the web page contents using the `reviewedBy` property.
 
 This data model should be sufficient for describing provenence information for creative works on the Web. The example can be extended to other media objects (like video or music recording) and more specific publishing contexts (like news article or blog posting).
