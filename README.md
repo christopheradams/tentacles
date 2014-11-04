@@ -1,7 +1,7 @@
 About
 =====
 
-Tentacles is a basic data model for identifying and describing the use and re-use of creative works and media objects on the World Wide Web. It is based on the type hierarchy and vocabulary of [Schema.org](http://schema.org/) (~> 1.9), "an initiative... to create and support a common set of schemas for structured data markup on web pages." (*Wikipedia*)
+This document outlines a data model for describing the re-use of creative works and media objects on the World Wide Web. It is based on the type hierarchy and vocabulary of [Schema.org](http://schema.org/) (~> 1.9), "an initiative... to create and support a common set of schemas for structured data markup on web pages." (*Wikipedia*)
 
 The purpose of our data model is to record latent provenance information available on the web by asserting relationships between creators, rights-holders, creative works, web pages, and media objects.
 
