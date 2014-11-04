@@ -32,27 +32,42 @@ Expressed in JSON-LD, the basic data may resemble:
 ```json
 {
   "@context": "http://schema.org",
-  "@type": "WebPage",
-  "hasPart": {
-    "@type": "CreativeWork",
-    "associatedMedia": {
-      "@type": "ImageObject",
-      "contentUrl": "http://example.com/newspaper/article/cropped_image.jpg"
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "name": "The Article Re-Using Cropped version of original Work",
+      "url": "http://example.com/newspaper/article",
+      "hasPart": {
+        "associatedMedia": {
+          "@type": "ImageObject",
+          "contentUrl": "http://example.com/newspaper/article/cropped_image.jpg",
+          "encodesCreativeWork": "http://example.org/octopus/works/abc124"
+        }
+      },
+      "reviewedBy": {
+        "@type": "Person",
+        "name": "The User",
+        "sameAs": "http://example.org/octopus/users/def456"
+      }
     },
-    "exampleOfWork": {
+    {
       "@type": "CreativeWork",
-      "name": "The Original Work",
-      "sameAs": "http://example.org/octopus/works/abc123"
+      "name": "Cropped version of original work",
+      "sameAs": "http://example.org/octopus/works/abc124",
+      "license": "http://creativecommons.org/licenses/by-sa/4.0/",
+      "exampleOfWork": {
+        "@type": "CreativeWork",
+        "name": "The Original Work",
+        "sameAs": "http://example.org/octopus/works/abc123"
+      }
+    },
+    {
+      "@type": "CreativeWork",
+      "name": "Original work",
+      "sameAs": "http://example.org/octopus/works/abc123",
+      "license": "http://artlibre.org/licence/lal/"
     }
-  },
-  "reviewedBy": {
-    "@type": "Person",
-    "name": "The User",
-    "sameAs": "http://example.org/octopus/users/def456"
-  },
-  "lastReviewed": "2014-11-01",
-  "name": "The Article Re-Using the Work",
-  "url": "http://example.com/newspaper/article"
+  ]
 }
 ```
 
