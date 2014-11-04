@@ -27,4 +27,30 @@ If a work has been re-used on the web, we identify the `WebPage` where it is sho
 
 We can also identify which user has asserted or verified the web page contents using the `reviewedBy` property.
 
+Expressed in JSON-LD, the basic data may resemble:
+
+```json
+{
+  "@context": "http://schema.org",
+  "@type": "WebPage",
+  "hasPart": {
+    "@type": "CreativeWork",
+    "associatedMedia": {
+      "@type": "ImageObject",
+      "contentUrl": "http://example.com/newspaper/article/cropped_image.jpg"
+    },
+    "exampleOfWork": {
+      "@type": "CreativeWork",
+      "sameAs": "http://example.org/octopus/works/abc123"
+    }
+  },
+  "reviewedBy": {
+    "@type": "Person",
+    "url": "http://example.org/octopus/users/def456"
+  },
+  "lastReviewed": "2014-11-01",
+  "url": "http://example.com/newspaper/article"
+}
+```
+
 This data model should be sufficient for describing provenence information for creative works on the Web. The example can be extended to other media objects (like video or music recording) and more specific publishing contexts (like news article or blog posting).
