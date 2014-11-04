@@ -41,14 +41,17 @@ Expressed in JSON-LD, the basic data may resemble:
     },
     "exampleOfWork": {
       "@type": "CreativeWork",
+      "name": "The Original Work",
       "sameAs": "http://example.org/octopus/works/abc123"
     }
   },
   "reviewedBy": {
     "@type": "Person",
-    "url": "http://example.org/octopus/users/def456"
+    "name": "The User",
+    "sameAs": "http://example.org/octopus/users/def456"
   },
   "lastReviewed": "2014-11-01",
+  "name": "The Article Re-Using the Work",
   "url": "http://example.com/newspaper/article"
 }
 ```
