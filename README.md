@@ -12,6 +12,8 @@ Schema.org uses a generic data model derived from RDF Schema which comprises a [
 
 ![TypeHierarchy.png](https://raw.githubusercontent.com/christopheradams/tentacles/master/uml/TypeHierarchy.png)
 
+The diagram shows a fraction of the valid properties for each type, only those that are relevant to our model. Note that the types are arranged in an inheritance hierarchy, meaning that each class can have all of the properties of the types above it. For example, a `WebPage` can have a `url` property because `Thing` is one of its superclasses.
+
 Data Model
 ==========
 
