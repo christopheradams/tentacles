@@ -51,6 +51,7 @@ class CreativeWork {
   CreativeWork exampleOfWork;
   CreativeWork hasPart;
   URL isBasedOnUrl;
+  CreativeWork isPartOf;
   URL license;
   Person publisher;
   // CreativeWork workExample;
