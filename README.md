@@ -38,11 +38,9 @@ Expressed in JSON-LD, the basic data may resemble:
       "name": "The Article Re-Using Cropped version of original Work",
       "url": "http://example.com/newspaper/article",
       "hasPart": {
-        "associatedMedia": {
           "@type": "ImageObject",
           "contentUrl": "http://example.com/newspaper/article/cropped_image.jpg",
           "encodesCreativeWork": "http://example.org/octopus/works/abc124"
-        }
       },
       "reviewedBy": {
         "@type": "Person",
