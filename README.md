@@ -40,7 +40,10 @@ Expressed in JSON-LD, the basic data may resemble:
       "hasPart": {
           "@type": "ImageObject",
           "contentUrl": "http://example.com/newspaper/article/cropped_image.jpg",
-          "encodesCreativeWork": "http://example.org/octopus/works/abc124"
+          "encodesCreativeWork": {
+            "@type": "CreativeWork",
+            "sameAs": "http://example.org/octopus/works/abc124"
+          }
       },
       "reviewedBy": {
         "@type": "Person",
